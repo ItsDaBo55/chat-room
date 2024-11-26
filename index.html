@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->    
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Chat App</title>
+</head>
+<body>
+    <h1 class="text-center mb-3">Chat App</h1>
+    <div id="chat-container" class="container d-flex flex-column vh-100">
+        <!-- Chat Messages -->
+        <div id="messages" class="flex-grow-1 overflow-auto p-3 border rounded bg-dark text-light mb-3">
+            <!-- Messages will be dynamically inserted here -->
+        </div>
+
+        <!-- Input Section -->
+        <div id="input-container" class="input-group gap-2">
+            <input type="text" id="message-input" class="form-control bg-secondary text-light" placeholder="Type your message...">
+            <button id="send-button" class="btn btn-primary">Send</button>
+        </div>
+    </div>
+
+    <!-- Username Modal -->
+    <div id="username-modal" class="modal fade" tabindex="-1" aria-labelledby="username-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="username-modal-label">Enter Your Username</h5>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="username-input" class="form-control bg-secondary text-light" placeholder="Username">
+                </div>
+                <div class="modal-footer">
+                    <button id="username-submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
