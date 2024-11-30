@@ -22,7 +22,7 @@ io.on('connection', (socket) => {
     });
 
     socket.on('user connect', (username) => {
-        io.emit('user disconnect', username);
+        io.emit('user connect', username);
     });
 });
 
