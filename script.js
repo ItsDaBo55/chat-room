@@ -52,7 +52,7 @@ socket.on('chat message', (message) => {
 });
 // Listen for disconnects
 socket.on('user disconnect', (message) => {
-    displayMessage(message, false, message); // Display messages
+    displayMessage(message, false, false, message); // Display messages
 });
 // Listen for connects
 socket.on('user connect', (message) => {
